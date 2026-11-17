@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandeep Chituprolu · Senior Product Manager</title>
+<meta name="description" content="Product manager in Paris. 10 years shipping platform and GenAI products at L'Oréal scale, and building working LLM products to answer the questions a spec cannot.">
+<meta property="og:title" content="Sandeep Chituprolu · Senior Product Manager">
+<meta property="og:description" content="Case studies with the decisions, the trade-offs and what was rejected. The part a resume has no room for.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f1e8; --paper-2:#ece6d8; --card:#fbf9f3;
+  --ink:#17181c; --ink-2:#4a4c55; --ink-3:#7b7d86;
+  --line:#d9d2c1; --accent:#c8401a; --accent-ink:#fff; --accent-soft:#f3dfd3;
+  --ok:#2f6b4f;
+  --serif:"Fraunces",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131417; --paper-2:#1b1c21; --card:#1a1b20;
+    --ink:#f1ede3; --ink-2:#b9b6ad; --ink-3:#85837c;
+    --line:#2e2f36; --accent:#ff7a4d; --accent-ink:#1a0d07; --accent-soft:#3a2018;
+    --ok:#7fc8a3;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--accent)}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+@media(max-width:600px){.wrap{padding:0 18px}body{font-size:16px}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-family:var(--serif);font-weight:600;font-size:19px;text-decoration:none;white-space:nowrap}
+.brand i{color:var(--accent);font-style:normal}
+.nav nav{display:flex;gap:26px;font-size:14.5px}
+.nav nav a{text-decoration:none;color:var(--ink-2)}
+.nav nav a:hover{color:var(--accent)}
+.nav .cta{color:var(--ink);font-weight:600}
+@media(max-width:720px){.nav nav a:not(.cta){display:none}}
+
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.label b{color:var(--accent);font-weight:500}
+
+/* hero */
+.hero{padding-top:96px;padding-bottom:64px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,6.6vw,84px);line-height:1.02;letter-spacing:-.025em;margin:22px 0 28px;max-width:15ch;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.hero p.lede{font-size:clamp(18px,2vw,21px);color:var(--ink-2);max-width:62ch;margin:0 0 34px}
+.hero p.lede strong{color:var(--ink);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px);color:inherit}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{color:var(--accent-ink)}
+@media(max-width:600px){.hero{padding-top:56px;padding-bottom:44px}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.stat{padding:26px 20px 24px 0;border-right:1px solid var(--line)}
+.stat+.stat{padding-left:20px}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--serif);font-size:clamp(30px,3.6vw,46px);line-height:1;letter-spacing:-.02em;font-weight:500}
+.stat .d{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.4}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.stat{padding:20px 14px 18px 0!important;border-right:0;border-bottom:1px solid var(--line)}.stat:nth-child(odd){border-right:1px solid var(--line)}.stat:nth-child(even){padding-left:16px!important}.stat:last-child{grid-column:1/-1;border-bottom:0;border-right:0}}
+
+/* sections */
+section{padding:92px 0 0}
+.sec-head{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:end;margin-bottom:44px}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:12px 0 0;text-wrap:balance}
+.sec-head p{color:var(--ink-2);margin:0;max-width:58ch}
+@media(max-width:800px){.sec-head{grid-template-columns:1fr;gap:14px}section{padding-top:64px}}
+
+/* work cards */
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+.wcard.wide{grid-column:1/-1!important}
+.wcard.feature{grid-column:span 2;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.wcard.feature .label{color:color-mix(in srgb,var(--paper) 60%,transparent)}
+.wcard.feature p{color:color-mix(in srgb,var(--paper) 78%,transparent)}
+.wcard h3{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.18;margin:12px 0 12px;letter-spacing:-.01em}
+.wcard.feature h3{font-size:clamp(26px,3vw,34px)}
+.wcard p{margin:0 0 20px;color:var(--ink-2);font-size:15.5px}
+.results{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:8px;background:var(--accent-soft);color:var(--ink);white-space:nowrap}
+.wcard.feature .chip{background:var(--accent);color:var(--accent-ink)}
+.chip.award{background:transparent;border:1px solid currentColor;opacity:.85}
+@media(max-width:900px){.work{grid-template-columns:1fr}.wcard.feature{grid-column:auto}}
+
+/* case studies */
+.case{border-top:1.5px solid var(--ink);padding:44px 0 56px;scroll-margin-top:70px;display:grid;grid-template-columns:5fr 6fr;gap:52px;align-items:start}
+.case:nth-of-type(even) .shot{order:2}
+.case .num{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.08em}
+.case h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,40px);line-height:1.08;letter-spacing:-.02em;margin:10px 0 8px}
+.case .one{font-size:18.5px;color:var(--ink-2);margin:0 0 24px;max-width:52ch}
+.case dl{margin:0;display:grid;gap:18px}
+.case dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.case dd{margin:0;font-size:15.5px;color:var(--ink)}
+.case dd ul{margin:0;padding-left:18px}
+.case dd li{margin-bottom:6px}
+.case dd li::marker{color:var(--accent)}
+.case .links{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px;font-weight:600;font-size:15px}
+.case .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tag{font-family:var(--mono);font-size:11.5px;padding:4px 9px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+.shot{position:sticky;top:84px}
+.shot figure{margin:0;background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:16px;overflow:hidden}
+.shot img{border-radius:10px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.shot.phone figure{display:flex;justify-content:center;padding:28px 16px}
+.shot.phone img{width:min(270px,70%);border-radius:22px}
+.shot figcaption{font-size:13px;color:var(--ink-3);margin-top:12px;text-align:center}
+.diagram{font-family:var(--mono);font-size:13px;line-height:1.9;padding:14px 10px;color:var(--ink)}
+.diagram .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.diagram .box{border:1.5px solid var(--ink);border-radius:8px;padding:5px 11px;background:var(--card)}
+.diagram .box.hot{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.diagram .arrow{color:var(--ink-3)}
+.diagram .note{color:var(--ink-3);font-size:12px;margin:2px 0 14px}
+.evalgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;margin:8px 0 6px}
+.evalgrid i{aspect-ratio:1;border-radius:4px;background:var(--ok);opacity:.85}
+@media(max-width:900px){.case{grid-template-columns:1fr;gap:28px;padding:36px 0 44px}.case:nth-of-type(even) .shot{order:0}.shot{position:static}}
+
+#work .case{padding-bottom:0}
+/* small builds */
+.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;border-top:1.5px solid var(--ink);padding-top:36px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.mini .thumb{height:190px;background:var(--paper-2);overflow:hidden;display:flex;align-items:flex-start;justify-content:center}
+.mini .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.mini .thumb.txt{align-items:center;font-family:var(--serif);font-style:italic;font-size:44px;color:var(--accent)}
+.mini .body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.mini h4{font-family:var(--serif);font-weight:500;font-size:22px;margin:0 0 8px}
+.mini p{font-size:15px;color:var(--ink-2);margin:0 0 16px}
+.mini a{margin-top:auto;font-weight:600;font-size:14.5px}
+@media(max-width:900px){.minis{grid-template-columns:1fr}}
+
+/* approach */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1.5px solid var(--ink)}
+.pr{padding:30px 34px 32px 0;border-bottom:1px solid var(--line)}
+.pr:nth-child(odd){border-right:1px solid var(--line)}
+.pr:nth-child(even){padding-left:34px}
+.pr .k{font-family:var(--mono);font-size:12.5px;color:var(--accent)}
+.pr h4{font-family:var(--serif);font-weight:500;font-size:24px;margin:8px 0 8px;line-height:1.2}
+.pr p{margin:0;color:var(--ink-2);font-size:15.5px}
+@media(max-width:800px){.principles{grid-template-columns:1fr}.pr{padding:24px 0!important;border-right:0!important}}
+
+/* experience */
+.xp{border-top:1.5px solid var(--ink)}
+.role{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.role .when{font-family:var(--mono);font-size:13px;color:var(--ink-3);padding-top:5px}
+.role h4{font-size:19px;margin:0 0 2px;font-weight:600}
+.role .org{color:var(--ink-2);font-size:15px;margin-bottom:10px}
+.role ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--ink-2)}
+.role li{margin-bottom:5px}
+.role li b{color:var(--ink);font-weight:600}
+@media(max-width:700px){.role{grid-template-columns:1fr;gap:6px}}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:36px}
+.cols h5{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px;font-weight:500}
+.cols p,.cols li{font-size:15px;color:var(--ink-2);margin:0 0 6px}
+.cols ul{margin:0;padding:0;list-style:none}
+@media(max-width:800px){.cols{grid-template-columns:1fr;gap:24px}}
+
+/* contact */
+.contact{margin-top:96px;background:var(--ink);color:var(--paper)}
+.contact .wrap{padding-top:84px;padding-bottom:72px}
+.contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.4vw,68px);line-height:1.04;letter-spacing:-.025em;margin:16px 0 26px;max-width:18ch;text-wrap:balance}
+.contact h2 em{color:var(--accent);font-weight:400}
+.contact p{color:color-mix(in srgb,var(--paper) 72%,transparent);max-width:54ch;margin:0 0 32px}
+.contact .label{color:color-mix(in srgb,var(--paper) 55%,transparent)}
+.contact .btn{border-color:var(--paper)}
+.contact .btn.primary{border-color:var(--accent)}
+.contact .btn:not(.primary):hover{color:var(--paper)}
+footer{font-size:13px;color:color-mix(in srgb,var(--paper) 50%,transparent);margin-top:60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(prefers-color-scheme:dark){.contact,.wcard.feature{background:#0b0b0d;color:var(--ink);border-color:var(--line)}.contact h2,.contact .btn{color:var(--ink)}.wcard.feature p{color:var(--ink-2)}.wcard.feature .label{color:var(--ink-3)}.contact p,footer,.contact .label{color:var(--ink-2)}.contact .btn{border-color:var(--ink)}.contact .btn.primary{color:var(--accent-ink)}.shot img{box-shadow:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Sandeep Chituprolu<i>.</i></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#cases">Side products</a>
+      <a href="#approach">Approach</a>
+      <a href="#background">Background</a>
+      <a class="cta" href="#contact">Contact →</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="wrap hero">
+  <div class="label"><b>●</b> Senior Product Manager · Platform &amp; AI · Paris</div>
+  <h1>I ship the prototype <em>before</em> the spec.</h1>
+  <p class="lede">I am a senior product manager with ten years in digital product, six of them owning multi-brand platform products and GenAI features at <strong>L'Oréal</strong>. My resume lists the outcomes. This page shows the part it cannot: <strong>how I frame a problem, what I choose not to build, and how I know something works.</strong></p>
+  <div class="btns">
+    <a class="btn primary" href="#work">Read the case studies</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</div>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label"><b>01</b> — From my work</div><h2>Behind one line of my resume.</h2></div>
+      <p>My resume gives this project a single bullet. Here is what the bullet leaves out. Details are kept generic on purpose; I can go deeper in conversation.</p>
+    </div>
+
+    <article class="case">
+      <div>
+        <div class="num">L'ORÉAL · GENAI · CONTENT WORKFLOW</div>
+        <h3>AI-generated SEO metadata, built to scale</h3>
+        <p class="one">Getting search metadata written for every page, in every market, without asking local teams to become SEO writers.</p>
+        <dl>
+          <div><dt>Problem</dt><dd>Page metadata is critical for search, and it was the part nobody filled in. Local teams focused on what visitors see. Many could not afford a local SEO agency and did not know how to write good metadata themselves. On top of that, the group has its own rules for metadata, such as length limits, which made writing it correctly even harder.</dd></div>
+          <div><dt>My role</dt><dd>I worked with the innovation team on the plan to bring in a third-party GenAI solution. My part was the product question: where in the content workflow should generation happen to get the best result, and how do we design that integration so it can scale across hundreds of group websites instead of being a one-brand tool.</dd></div>
+          <div><dt>Options weighed</dt><dd><ul>
+            <li><b>Local SEO agencies.</b> Good quality, but out of reach for many markets.</li>
+            <li><b>Scripted templates</b> such as "Brand + Page title + Product category". Cheap and consistent, but blind to what the page actually says.</li>
+            <li><b>GenAI, the choice.</b> It writes from the page's real context and still follows the rules set by the global SEO team.</li>
+          </ul></dd></div>
+          <div><dt>Concerns I had to answer</dt><dd>Brands and local teams had to be brought on board, and their worries were specific: would it respect the brand's tone, and would it avoid black-listed wording?</dd></div>
+          <div><dt>How we knew it was good enough</dt><dd>We did not judge by impression. Each pilot market had a golden dataset to evaluate the generated metadata against before anything scaled.</dd></div>
+          <div><dt>Rollout</dt><dd>One brand and three pilot markets first, which took about two months. After that, onboarding a new market took less than a week, and generating metadata for new or updated pages took less than a day.</dd></div>
+          <div><dt>Outcome</dt><dd>Live across 50+ languages, with an average gain of two search ranking positions. The work won Best Content Management Modernisation from Sitecore (2023) and was a global finalist at L'Oréal's Digital Acceleration Summit (2022).</dd></div>
+        </dl>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="diagram">
+            <div class="note" style="margin-top:0">what goes in</div>
+            <div class="row"><span class="box">page content</span><span class="box">global SEO rules</span><span class="box">brand tone</span><span class="box">black-listed words</span></div>
+            <div class="note">&nbsp;</div>
+            <div class="row"><span class="arrow">↓</span><span class="box hot">GenAI metadata generation</span></div>
+            <div class="note">inside the content workflow, not a separate tool</div>
+            <div class="row"><span class="arrow">↓</span><span class="box">evaluated against a golden dataset</span></div>
+            <div class="note">per pilot market, before scaling</div>
+            <div class="note" style="margin-top:22px">time to deliver</div>
+            <div class="row"><span class="box">pilot: 1 brand, 3 markets</span><span class="arrow">≈ 2 months</span></div>
+            <div class="row" style="margin-top:8px"><span class="box">each new market</span><span class="arrow">&lt; 1 week</span></div>
+            <div class="row" style="margin-top:8px"><span class="box">new or updated pages</span><span class="arrow">&lt; 1 day</span></div>
+          </div>
+          <figcaption>The slow part happened once; every market after that was fast</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CASE STUDIES ============ -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label"><b>02</b> — Side products</div><h2>Products I built to find out.</h2></div>
+      <p>Each one started as a real problem at home or at work and went through a small product process: who it is for, what success looks like, what it deliberately leaves out. I build with AI coding assistants and review every change like a tech lead.</p>
+    </div>
+
+    <!-- Ville Idéale -->
+    <article class="case">
+      <div>
+        <div class="num">CASE 01 · DATA PRODUCT · OPEN BETA</div>
+        <h3>Ville Idéale</h3>
+        <p class="one">A comparison engine for choosing where to live in Île-de-France: all 1,265 communes, down to neighbourhood level, on official open data.</p>
+        <dl>
+          <div><dt>Problem</dt><dd>Someone moving to the Paris region has to weigh rent, schools, safety, services and commute across 1,265 communes using scattered sources. Review sites are subjective, property portals are built for listings, and nothing answers the question below commune level.</dd></div>
+          <div><dt>Who it is for</dt><dd>I mapped five personas and chose to serve two: the arriving outsider with no mental map of the region, and the Paris-leaver with kids. Locals are treated as a data QA source, not as the target.</dd></div>
+          <div><dt>Decisions that shaped it</dt><dd><ul>
+            <li><b>Rank, don't grade.</b> Every criterion is a percentile across all communes ("top 12% for schools"). There is no objective 7.4/10 town, but a rank is defensible and checkable.</li>
+            <li><b>Neighbourhood granularity</b> (INSEE IRIS) as the differentiator. The closest competitor states it stops at commune level.</li>
+            <li><b>User-adjustable weights are core</b>, because the right ranking depends on the person.</li>
+            <li><b>Merged métro into commute scoring</b> after spotting inner-ring towns ranked wrongly. It corrected 140 communes.</li>
+          </ul></dd></div>
+          <div><dt>What I rejected</dt><dd>Display ads (they break the "open data, no ads" trust position), a département layer (it hides the variance the product exists to show), and affiliate links until there is traffic and trust.</dd></div>
+          <div><dt>Where it stands</dt><dd>Live in open beta with a retroactive PRD, a decision log, a competitor teardown, 1,265 SEO city pages and a beta scoped to one research question: do users trust the comparison enough to act on it? Monetisation is sequenced behind a fake-door test.</dd></div>
+        </dl>
+        <div class="stack"><span class="tag">Python data pipeline</span><span class="tag">GTFS</span><span class="tag">INSEE open data</span><span class="tag">Leaflet</span><span class="tag">Vercel</span></div>
+        <div class="links"><a href="https://my-ideal-city.vercel.app" target="_blank" rel="noopener">Open the live product ↗</a></div>
+      </div>
+      <div class="shot">
+        <figure><img src="assets/ville-home.png" alt="Ville Idéale homepage showing a ranked list of communes with percentile bars for rent, schools, services, safety and commute" loading="lazy"><figcaption>my-ideal-city.vercel.app · percentile ranks, not invented scores</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- French verb bot -->
+    <article class="case">
+      <div>
+        <div class="num">CASE 02 · LLM AGENT · EVALS</div>
+        <h3>French Verb Tutor</h3>
+        <p class="one">A Telegram tutor that drills French conjugation across 8 tenses, decides what to practise next, and is checked by an eval suite before I trust its grading.</p>
+        <dl>
+          <div><dt>Problem</dt><dd>I am learning French and conjugation only sticks with daily, corrected practice. Apps drill what they choose. I wanted the verbs I actually get wrong to come back sooner, with the mistake explained in French.</dd></div>
+          <div><dt>Decisions that shaped it</dt><dd><ul>
+            <li><b>Two modes on purpose.</b> A fixed practice flow with spaced repetition, and a tool-calling agent that reads the student's history and chooses verbs and tenses itself.</li>
+            <li><b>Hand-rolled agent loop, no framework,</b> so every model call and tool dispatch is visible. That was the point: learn what agents really do.</li>
+            <li><b>Cost guardrails by design.</b> A hard ceiling on tool calls per message and a cap on conversation history, so a confused agent cannot drain the budget.</li>
+            <li><b>Provider-agnostic.</b> Switching between OpenAI and Claude models is a one-line config change.</li>
+          </ul></dd></div>
+          <div><dt>How I know the grader works</dt><dd>A 36-case eval set in 12 categories: correct answers, wrong endings, wrong tense, incomplete answers, non-answers, real student messages, and policy calls such as missing accents and elision. An LLM grader that marks a correct answer wrong destroys a learner's trust faster than any other bug.</dd></div>
+          <div><dt>Where it stands</dt><dd>Running daily on Railway with 85 verbs and a shareable verb list for my teacher. Next: a teacher mode to push specific verbs to students.</dd></div>
+        </dl>
+        <div class="stack"><span class="tag">Python</span><span class="tag">Tool-calling agent</span><span class="tag">LiteLLM</span><span class="tag">SQLite</span><span class="tag">Telegram</span><span class="tag">Railway</span></div>
+        <div class="links"><span style="color:var(--ink-3);font-weight:500">Private repository · walkthrough on request</span></div>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="diagram">
+            <div class="row"><span class="box">student message</span><span class="arrow">→</span><span class="box hot">tutor agent</span></div>
+            <div class="note">max 6 tool calls · 24-message history</div>
+            <div class="row"><span class="box">read history</span><span class="box">pick verb + tense</span><span class="box">grade answer</span><span class="box">close session</span></div>
+            <div class="note">tools the agent can call</div>
+            <div class="row"><span class="box">SQLite</span><span class="arrow">→</span><span class="box">weak verbs return sooner</span></div>
+            <div class="note" style="margin-top:22px">eval set · 36 cases · 12 categories</div>
+            <div class="evalgrid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <figcaption>Agent loop and the eval set that guards the grader</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Grocery bot -->
+    <article class="case">
+      <div>
+        <div class="num">CASE 03 · VISION AI · AUTOMATION</div>
+        <h3>Grocery Receipt Bot</h3>
+        <p class="one">Photograph a receipt in Telegram and every line item lands in a shared Google Sheet. A rebuild of a no-code workflow, with no new subscription.</p>
+        <dl>
+          <div><dt>Problem</dt><dd>My household tracked grocery spend through a no-code automation. It proved the habit, then its trial ended. The job was to keep the exact same behaviour for two users at zero added cost, without losing the data already collected.</dd></div>
+          <div><dt>Decisions that shaped it</dt><dd><ul>
+            <li><b>Prototype first, build second.</b> The no-code version validated the habit before any code was written.</li>
+            <li><b>Keep the existing sheet layout</b> so history stays continuous. The bot only appends and never overwrites.</li>
+            <li><b>"Null, don't guess."</b> The prompt tells the model to leave unreadable fields empty. A blank cell is recoverable, a confident wrong price is not.</li>
+            <li><b>Model fallback chain.</b> Free-tier capacity was unreliable on the larger model, so requests try a lighter model first and fall back in order.</li>
+            <li><b>Designed failure states.</b> "Couldn't read it", "no items found" and "parsed but couldn't save" are three different messages, because the user's next step differs.</li>
+          </ul></dd></div>
+          <div><dt>What it leaves out</dt><dd>No database, no dashboard, no accounts. The spreadsheet is the product surface people already use. Access is an allowlist with an admin alert on unknown senders.</dd></div>
+          <div><dt>Where it stands</dt><dd>In daily use on French receipts in euros. Changes arrive as pull requests that I review before merge.</dd></div>
+        </dl>
+        <div class="stack"><span class="tag">Python</span><span class="tag">Gemini vision</span><span class="tag">Structured JSON output</span><span class="tag">Google Sheets</span><span class="tag">Railway</span></div>
+        <div class="links"><a href="https://github.com/lattamatic/grocery-receipt-bot" target="_blank" rel="noopener">Code and architecture notes ↗</a></div>
+      </div>
+      <div class="shot">
+        <figure>
+          <div class="diagram">
+            <div class="row"><span class="box">receipt photo</span><span class="arrow">→</span><span class="box">Telegram bot</span></div>
+            <div class="note">allowlisted chats only</div>
+            <div class="row"><span class="box hot">vision model</span><span class="arrow">→</span><span class="box">structured JSON</span></div>
+            <div class="note">light model first, fallback in order · null for unreadable fields</div>
+            <div class="row"><span class="box">append rows</span><span class="arrow">→</span><span class="box">shared Google Sheet</span></div>
+            <div class="note">one row per line item · never overwrite</div>
+            <div class="row"><span class="box">confirmation summary</span><span class="arrow">or</span><span class="box">a specific, recoverable error</span></div>
+          </div>
+          <figcaption>A stateless pipeline: the sheet is the only storage</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Store locator -->
+    <article class="case">
+      <div>
+        <div class="num">CASE 04 · UX REBUILD · PROTOTYPE</div>
+        <h3>Mobile Store Locator Rebuild</h3>
+        <p class="one">A product owner case study and working prototype for a salon locator where about 90% of traffic is mobile.</p>
+        <dl>
+          <div><dt>Problem</dt><dd>Locator visitors are close to converting: they want to book, call or get directions. The existing flow showed a long list before the map, made the map hard to reach, filtered weakly and demanded a lot of scrolling before a useful result.</dd></div>
+          <div><dt>Decisions that shaped it</dt><dd><ul>
+            <li><b>Map first on mobile,</b> with distance on every pin so the choice can be made without opening a card.</li>
+            <li><b>Sticky filters</b> for service, open now and distance, since those are the questions a visitor actually has.</li>
+            <li><b>Empty, loading and error states built in,</b> including recovery from a search with no results.</li>
+            <li><b>Success defined before the build:</b> time to identify a relevant store, CTA click-through on directions, call and booking, and scroll depth before the first useful result.</li>
+          </ul></dd></div>
+          <div><dt>Why it matters</dt><dd>Store Locator is one of the components I own professionally (1M+ sessions). This rebuild shows how I frame a problem, set KPIs and test a direction in code before asking a team to commit.</dd></div>
+        </dl>
+        <div class="stack"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Leaflet</span><span class="tag">PRD · roadmap · UX audit</span></div>
+        <div class="links"><a href="https://lattamatic.github.io/mobile-store-locator-ux-rebuild/" target="_blank" rel="noopener">Try the prototype ↗</a><a href="https://github.com/lattamatic/mobile-store-locator-ux-rebuild/blob/main/PRD.md" target="_blank" rel="noopener">PRD ↗</a><a href="https://github.com/lattamatic/mobile-store-locator-ux-rebuild/blob/main/UX-AUDIT.md" target="_blank" rel="noopener">UX audit ↗</a><a href="https://github.com/lattamatic/mobile-store-locator-ux-rebuild/blob/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap ↗</a></div>
+      </div>
+      <div class="shot phone">
+        <figure><img src="assets/store-locator.png" alt="Mobile store locator prototype with search, service filters and a map showing distance on each pin" loading="lazy"><figcaption>Map-first flow with distance on every pin</figcaption></figure>
+      </div>
+    </article>
+
+    <!-- minis -->
+    <div class="minis">
+      <article class="mini">
+        <div class="thumb txt">IPS</div>
+        <div class="body">
+          <h4>School Finder Île-de-France</h4>
+          <p>Map, results, social position index and school catchment areas in one place, built on Ministry of Education open data for parents choosing a neighbourhood.</p>
+          <a href="https://github.com/lattamatic/school-finder-idf" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="thumb"><img src="assets/hydrohabit-home.png" alt="HydroHabit iOS app home screen in demo mode" loading="lazy" style="object-position:center 18%"></div>
+        <div class="body">
+          <h4>HydroHabit</h4>
+          <p>An iOS hydration tracker whose reminders respect the user's day, pausing after meals. A one-tap demo mode loads 15 days of history so a reviewer sees a populated app at once.</p>
+          <a href="https://github.com/lattamatic/HydroHabit" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+      </article>
+      <article class="mini">
+        <div class="thumb"><img src="assets/sun-block-rally.png" alt="Sun Block Rally browser game" loading="lazy"></div>
+        <div class="body">
+          <h4>Sun Block Rally</h4>
+          <p>My first AI-assisted project, kept public as where I started. The value is the write-up: seven things that were broken, why they mattered, and how simulated matches exposed rallies that never ended.</p>
+          <a href="https://lattamatic.github.io/sun-block-rally/" target="_blank" rel="noopener">Play it ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label"><b>03</b> — Approach</div><h2>How I work.</h2></div>
+      <p>The same habits show up at L'Oréal scale and in a weekend build.</p>
+    </div>
+    <div class="principles">
+      <div class="pr"><div class="k">01</div><h4>Start from the user's job, not the feature list.</h4><p>Every product names who it is for and what it deliberately leaves out. Saying no to a persona is a decision, and I write it down.</p></div>
+      <div class="pr"><div class="k">02</div><h4>Prototype early.</h4><p>A no-code or throwaway version first, to test the habit before investing in the build. Then a working version, because it answers questions a spec cannot.</p></div>
+      <div class="pr"><div class="k">03</div><h4>Design the failure state.</h4><p>AI features are wrong some of the time. I make the error visible and recoverable, and I would take an honest blank over a confident guess.</p></div>
+      <div class="pr"><div class="k">04</div><h4>Measure before trusting.</h4><p>Evals for model behaviour, A/B tests for user behaviour, and a success metric agreed before the work starts. Changes ship as reviewed pull requests with their test status.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BACKGROUND ============ -->
+<section id="background">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label"><b>04</b> — Background</div><h2>The short version.</h2></div>
+      <p>The full history, with the numbers, is on my resume. This page is for what a resume has no room for: how I think and how I decide.</p>
+    </div>
+    <div class="xp">
+      <div class="role"><div class="when">2020 — Now</div><div><h4>Product Owner, then Platform Product Owner</h4><div class="org" style="margin:0">L'Oréal · Paris · multi-brand web components and GenAI features across 30+ markets</div></div></div>
+      <div class="role"><div class="when">2016 — 2020</div><div><h4>Project Manager</h4><div class="org" style="margin:0">Photon · Chennai · multi-team delivery programmes in beauty and e-learning</div></div></div>
+      <div class="role"><div class="when">2016</div><div><h4>Master of Engineering</h4><div class="org" style="margin:0">IIT Madras</div></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ CONTACT ============ -->
+<div class="contact" id="contact">
+  <div class="wrap">
+    <div class="label">05 — Contact</div>
+    <h2>Looking for a <em>senior product</em> role where the PM can also build.</h2>
+    <p>Based in Paris. I am happy to walk through any case study here live, including the code, the evals and the decisions that did not work.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:chituprolusandeep@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/lattamatic" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <footer><span>© 2026 Sandeep Chituprolu</span><span>Designed and built by me, with AI assistance.</span></footer>
+  </div>
+</div>
+
+</body>
+</html>
